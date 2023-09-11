@@ -33,7 +33,7 @@ public class StarBoostScript : MonoBehaviour
             player.GetComponent<PlayerController>().boostStats(speedBoost, jumpBoost);
             player.GetComponent<Health>().HealthBoost(healthBoostAmount);
 
-            GetComponent<BoxCollider2D>().isTrigger = false;
+            GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().enabled = false;
 
             StartCoroutine(boostPeriod(boostTime));
